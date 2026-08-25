@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awakening Boards — Blank Page August 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream: #f4ecd8;
+    --midnight: #0a1838;
+    --terracotta: #c84a2e;
+    --gold: #f5b834;
+    --muted: #6b6455;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; overflow-x:hidden; }
+  body{
+    min-height:100vh;
+    background: var(--cream);
+    color: var(--midnight);
+    font-family: 'Inter', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding: 6vh 24px;
+    position: relative;
+  }
+
+  .bg{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .bg svg{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+  }
+  .bg-wash{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(244,236,216,0.86);
+  }
+
+  .content{
+    position: relative;
+    z-index: 2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .eyebrow{
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 18px;
+  }
+
+  h1{
+    font-weight: 900;
+    font-size: clamp(2.8rem, 9vw, 6.4rem);
+    line-height: 0.94;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .splash{
+    position: relative;
+    width: min(320px, 62vw);
+    margin: 5vh 0 3vh;
+    transform: rotate(-7deg);
+  }
+  .splash svg{ width:100%; height:100%; display:block; }
+  .splash-text{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .splash-text span{
+    display:block;
+    font-weight: 900;
+    font-size: clamp(1.3rem, 4.4vw, 2.1rem);
+    line-height: 1.05;
+    color: var(--cream);
+    letter-spacing: -0.01em;
+  }
+
+  .note{
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-top: 1vh;
+  }
+
+  .signup{
+    display:flex; gap:10px; max-width: 440px; flex-wrap: wrap;
+    justify-content:center;
+    margin-top: 14vh;
+  }
+  .signup input[type="email"]{
+    flex: 1 1 220px; min-width:0;
+    padding: 14px 16px;
+    border-radius: 4px;
+    border: 1.5px solid var(--midnight);
+    background: var(--cream);
+    color: var(--midnight);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+  }
+  .signup input[type="email"]::placeholder{ color: rgba(10,24,56,0.4); }
+  .signup input[type="email"]:focus{
+    outline:none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(200,74,46,0.15);
+  }
+  .signup button{
+    flex: 0 0 auto;
+    padding: 14px 22px;
+    border-radius: 4px;
+    border: none;
+    background: var(--midnight);
+    color: var(--cream);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .signup button:hover{ background: var(--terracotta); transform: translateY(-1px); }
+  .signup button:focus-visible{ outline: 2px solid var(--terracotta); outline-offset: 2px; }
+  .confirm{
+    display:none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--terracotta);
+    margin-top: 16px;
+  }
+  .confirm.show{ display:block; }
+</style>
+</head>
+<body>
+
+  <div class="bg" aria-hidden="true">
+    <svg viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="bgSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#c2432b"/>
+          <stop offset="45%" stop-color="#cc5b30"/>
+          <stop offset="100%" stop-color="#e2903f"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="1200" height="330" fill="url(#bgSky)"/>
+      <circle cx="900" cy="150" r="140" fill="#f6e8c9" opacity="0.55"/>
+      <circle cx="900" cy="150" r="100" fill="#8f8f90" opacity="0.45"/>
+      <circle cx="900" cy="150" r="64" fill="#caa23c" opacity="0.95"/>
+      <path d="M0,300 L120,140 L230,230 L360,110 L480,220 L620,90 L760,190 L900,120 L1040,200 L1200,170 L1200,340 L0,340 Z" fill="#7a5769"/>
+      <path d="M0,320 L90,190 L200,260 L340,150 L470,250 L600,130 L740,230 L860,160 L980,240 L1120,190 L1200,220 L1200,360 L0,360 Z" fill="#5c4152"/>
+      <path d="M0,360 L110,300 L230,345 L350,285 L480,335 L610,270 L740,330 L870,295 L1000,340 L1130,305 L1200,325 L1200,640 L0,640 Z" fill="#0a1838"/>
+    </svg>
+  </div>
+  <div class="bg-wash"></div>
+
+  <div class="content">
+  <h1>AWAKENING<br>BOARDS</h1>
+
+  <div class="splash">
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <path d="M150.0,2.0 L173.0,34.3 L206.6,13.3 L215.6,51.9 L254.7,45.3 L248.1,84.4 L286.7,93.4 L265.7,127.0 L298.0,150.0 L265.7,173.0 L286.7,206.6 L248.1,215.6 L254.7,254.7 L215.6,248.1 L206.6,286.7 L173.0,265.7 L150.0,298.0 L127.0,265.7 L93.4,286.7 L84.4,248.1 L45.3,254.7 L51.9,215.6 L13.3,206.6 L34.3,173.0 L2.0,150.0 L34.3,127.0 L13.3,93.4 L51.9,84.4 L45.3,45.3 L84.4,51.9 L93.4,13.3 L127.0,34.3 Z" fill="#c84a2e" stroke="#f5b834" stroke-width="4"/>
+    </svg>
+    <div class="splash-text">
+      <span>COMING</span>
+      <span>SOON</span>
+    </div>
+  </div>
+
+  <form class="signup" id="notifyForm">
+    <label for="emailInput" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Email address</label>
+    <input type="email" id="emailInput" placeholder="you@company.com" required>
+    <button type="submit">Notify me at launch</button>
+  </form>
+  <div class="confirm" id="confirmMsg">You're on the list — we'll write when the book is ready.</div>
+  </div>
+
+<script>
+  document.getElementById('notifyForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    document.getElementById('confirmMsg').classList.add('show');
+    this.querySelector('button').textContent = "You're on the list";
+    this.querySelector('button').disabled = true;
+    this.querySelector('input').disabled = true;
+  });
+</script>
+
+</body>
+</html>

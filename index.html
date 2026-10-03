@@ -311,7 +311,6 @@
     <button type="submit">Notify me at launch</button>
   </form>
   <div class="confirm" id="confirmMsg">You're on the list — we'll write when the book is ready.</div>
-  <div id="debugMsg" style="font-size:11px; color:#999; margin-top:8px; word-break:break-all;"></div>
   </div>
 
 <script>
@@ -347,19 +346,12 @@
         if (!res.ok) throw new Error('FormSubmit responded with ' + res.status);
         return res.json();
       })
-      .then(function(data){
-        console.log('FormSubmit response:', data);
-        showConfirmed();
-        var dbg = document.getElementById('debugMsg');
-        if (dbg) dbg.textContent = 'DEBUG (remove before launch): ' + JSON.stringify(data);
-      })
+      .then(function(){ showConfirmed(); })
       .catch(function(err){
         console.error('Signup submission failed:', err);
         button.disabled = false;
         button.textContent = originalLabel;
-        var dbg = document.getElementById('debugMsg');
-        if (dbg) { dbg.textContent = 'DEBUG (remove before launch) ERROR: ' + err.message; dbg.style.display = 'block'; }
-        alert("Something went wrong submitting that — please try again in a moment. Error: " + err.message);
+        alert("Something went wrong submitting that — please try again in a moment.");
       });
   });
 </script>
